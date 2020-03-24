@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
         <!-- Import do favicon-->
         <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -19,26 +20,123 @@
         <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <script src="js/script.js"></script>
         <title>Riul Sudário de Souza</title>
         <meta charset="utf-8">
-    </head>
+</head>
 
-    <body>
-        <div class="topbar">
-            
+<body>
+        <div class="navbar">
+            <div class="topbar">
                 <a href="#" class="brand">
                     <img src="img/Logo_transparent.png" class="logo"/>
                 </a>
 
-			<nav role="navigation" class="nav-menu">
-					<a href="#" class="nav-link">Projetos</a>
-					<a href="#" class="nav-link">Sobre</a>
-					<a href="login/" class="nav-link">Contato</a>
-            </nav>
+                <nav role="navigation" class="nav-menu">
+                        <a onclick="go('#home')" class="nav-link">Home</a>
+                        <a onclick="go('#skills-description')" class="nav-link">Sobre</a>
+                        <a onclick="go('#skills-description')" class="nav-link">Projetos</a>
+                        <a onclick="go('#skills-description')" class="nav-link">Contato</a>
+                </nav>
+            </div>
         </div>
 
-     
+        <div class="conteudo">
+            <div class="content" id="home">
+               
+                <p class="rs">RS</p>
+            
+                <p class="titulo">Olá, eu sou Riul.</p>
+                <p class="descricao">Um Progamador Web Jr. apaixonado por desenvolvimento Web e Mobile que ama o que faz.</p>
+                <button class="presentation" onclick="go('#skills-description')">Vamos lá!</button>
+            </div>
+            
+                <div class="content-1" id="skills-description">
+                    <p class="titulo-descricao">É um prazer te conhecer!</p>
+                
+                    <div class="descricao-texto">
+                        <p class="paragrafo-descricao-inicial">
+                            Estou buscando minha primeira experiência na área programação.
+                            Sou Técnico em Informática e, atualmente, acadêmico de Sistemas de Informação. 
+                            Tenho experiência em desenvolvimento web a partir de cursos, projetos que participei e do cargo de CTO de uma Startup.
+                            Eu adoro resolver problemas e utilizar as melhores tecnologias para isso. Sou curioso, confiante e corajoso quando se trata disso.
+                        </p>
+                    </div>
+                    
+                        <div class="card-body">
+                            <div class="coluna-1">
+                                <img class="code" src="img/code.png" alt="code">
+                                <p class="titulo-card">Desenvolvimento Backend</p>
+                                <p class="paragrafo-descricao-card">
+                                    Aprecio soluções sólidas e bem construídas, com boa performance e excelente qualidade.
+                                </p>
+                                <p class="subtitulo">
+                                    Tecnologias:
+                                </p>
+                                <p class="paragrafo-descricao-card">
+                                    PHP, Java, NodeJS
+                                </p>
+                                <p class="subtitulo">
+                                    Skills:
+                                </p>
+                                <p class="lista-card">
+                                    Terminal
+                                </p>
+                                <p class="lista-card">
+                                    Github
+                                </p>
+                                <p class="lista-card">
+                                    Banco de dados relacionais
+                                </p>
+                                <p class="lista-card">
+                                    Arquitetura MVC
+                                </p>
+                            </div>
+                            
+                            <div class="coluna-2">
+                                <img class="code" src="img/code.png" alt="code">
+                                <p class="titulo-card">Desenvolvimento Frontend</p>
+                                <p class="paragrafo-descricao-card">
+                                    Gosto de começar do zero e amo transformar as ideias em algo real. 
+                                </p>
+                                <p class="subtitulo">
+                                    Tecnologias:
+                                </p>
+                                <p class="paragrafo-descricao-card">
+                                    HTML, CSS, JavaScript, ReactJS
+                                </p>
+                                <p class="subtitulo">
+                                    Skills:
+                                </p>
+                                <p class="lista-card">
+                                    Bootstrap
+                                </p>
+                                <p class="lista-card">
+                                   Materialize
+                                </p>
+                                <p class="lista-card">
+                                   Consumo de API
+                                </p>
+                                <p class="lista-card">
+                                   CRUD
+                                </p>
+                            </div>
+                        <div>
+                </div>
+        </div>                      
+<script>
+    function digitaTexto(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = '';
+      textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 70 * i);
+      });
+    }
+  
+    const titulo = document.querySelector('.descricao');
+    digitaTexto(titulo);
+  </script>
     </body>
 
 </html>
