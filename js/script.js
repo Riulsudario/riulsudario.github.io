@@ -7,5 +7,3 @@ const go = (elem) => {
         behavior: 'smooth'
      });
   }
-
-
