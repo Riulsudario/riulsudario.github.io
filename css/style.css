@@ -1,24 +1,36 @@
-body{
+body {
     background-color: rgb(32, 32, 32);
     margin: 0;
 }
 
 @font-face {
     font-family: Kontanter;
-    src: url(fonts/Kontanter-Bold.otf)
+    src: url(../fonts/Kontanter-Bold.otf)
 }
 
 /* TOPBAR */
-.topbar{
+
+.navbar {
+    background-color: rgb(32, 32, 32);
+}
+
+.navbar .topbar {
+    overflow: hidden;
     width: 100%;
     height: 100px;
     top: 0;
+    position: fixed;
+    background: rgba(32, 32, 32, 0.8);
+    z-index: 99;
+    transition: 1s;
 }
 
-.logo-link{
-    padding-left: 15%;
+.navbar .topbar .brand {
+    margin-left: 20%;
+    text-align: center;
 }
-.logo{
+
+.navbar .topbar .logo {
     max-width: 70px;
     height: 70px;
     vertical-align: middle;
@@ -27,18 +39,11 @@ body{
     top: 50%;
     transform: translateY(-50%); 
 }
-.brand{
-    margin-left: 15%;
-}
-.navbar {
-    background-color: rgb(32, 32, 32);
-}
 
-.w-nav{
-    background: rgb(32, 32, 32);
-}
 
-.nav-menu{
+
+
+.navbar nav {
     position: relative;
     float: right; 
     padding-right: 15%;
@@ -46,17 +51,20 @@ body{
     transform: translateY(-50%); 
 }
 
-.nav-link{
+.navbar nav .nav-link {
     color:rgb(255, 255, 255) !important;
     text-decoration: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
+
     padding: 14px 16px;
     text-align: center;
     font-size: 20px;
     position: relative;
 }
 
-a.nav-link:before {
+.navbar nav .nav-link:before {
     content: "";
     position: absolute; 
     width: 100%;
@@ -65,19 +73,21 @@ a.nav-link:before {
     left: 0;
     background-color: #fff;
     visibility: hidden;
-     -webkit-transform: scaleX(0); 
-     transform: scaleX(0); 
-     -webkit-transition: all 0.3s ease-in-out 0s; 
-     transition: all 0.3s ease-in-out 0s; 
+    -webkit-transform: scaleX(0); 
+    transform: scaleX(0); 
+    -webkit-transition: all 0.3s ease-in-out 0s; 
+    transition: all 0.3s ease-in-out 0s; 
   }
   
-  a.nav-link:hover:before {
+.navbar nav .nav-link:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
   
 /* FIM DO TOPBAR*/
+
+
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -86,7 +96,6 @@ a.nav-link:before {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: rgba(230,230,230,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
 a{
@@ -95,37 +104,19 @@ a{
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /*INICIO DO MAIN CONTENT*/
-.conteudo{
+.content {
     height:81vh;
     align-items: center;
     text-align: center;
 }
 
-button{
-    border-radius: 50px;
-    width: 10%;
-    padding: 10px;
-    background-color: transparent;
-    border: white solid;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 80px;
-}
-
-.presentation:hover{
-    background-color: white;
-    border: black solid;
-    color: rgb(32, 32, 32);
-}
-
-.content{
+.content .introduction-container {
     padding-top: 100px;
     height:83.5vh;
     align-items: center;
 }
 
-.rs{
+.content .introduction-container .rs {
     font-family: Kontanter;
     color: white;
     position: relative;
@@ -134,7 +125,7 @@ button{
     padding-top: 10px;
 }
 
-.titulo{
+.content .introduction-container .title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
     margin-top: 10px;
@@ -144,38 +135,55 @@ button{
     color: white;
 }
 
-.descricao{
+.content .introduction-container .brief-description {
     color: white;
     font-size: 20px;
 }
 
-.descricao::after {
+.content .introduction-container .brief-description::after {
     content: '|';
     opacity: 1;
     margin-left: 5px;
     display: inline-block;
     animation: blink .7s infinite;
-  }
+}
 
-  @keyframes blink {
+@keyframes blink {
     0%, 100% {
       opacity: 1;
     }
     50% {
       opacity: 0;
     }
-  }
-
-
-.content-1{
-    height: 200vh;
-    background-color: rgb(32, 32, 32);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
 }
 
-.titulo-descricao{
+.content .introduction-container button {
+    border-radius: 50px;
+    width: 10%;
+    padding: 10px;
+    background-color: transparent;
+    border: white solid;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 80px;
+    transition: 0.3s;
+}
+
+.content .introduction-container button:hover {
+    background-color: white;
+    color: rgb(32, 32, 32);
+    font-weight: 700;
+}
+
+
+
+.content .skills-container {
+    height: fit-content;
+    background-color: rgb(32, 32, 32);
+}
+
+.content .skills-container .title-skills {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
@@ -185,13 +193,13 @@ button{
     font-weight: bold;
 }
 
-.descricao-texto{
+.content .skills-container .skills-description-text {
  width: 50%;
  text-align: center;
  margin: 0 auto;
 }
 
-.paragrafo-descricao-inicial{
+.content .skills-container .skills-description-text p {
     color: white;
     font-size: 20px;
     line-height: 27px;
@@ -199,33 +207,29 @@ button{
 }
 
 
-.card-body{
+.content .skills-container .card-body {
     margin: 0 auto;
     margin-top: 0;
+    margin-bottom: 80px;
     width: 80%;
-   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.content .skills-container .card-body div {
+    width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+    background: rgb(64, 64, 64);
+    border-radius:8px;
+    padding: 70px 0;
 }
 
-.coluna-1{
-    
-background-color: rgb(64, 64, 64);
-width: 49%;
-float: left;
-border-radius: 5px;
--webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
--moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
-padding-bottom: 70px;
-
-}
-
-.code{
-    margin-top: 70px;
+.content .skills-container .card-body div img {
     max-width: 100px;
     color: white;
 }
 
-.titulo-card{
+.content .skills-container .card-body div h1 {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -234,7 +238,7 @@ padding-bottom: 70px;
     font-weight: bold;
 }
 
-.paragrafo-descricao-card{
+.content .skills-container .card-body .skills-description-paragraph {
     color: white;
     font-size: 20px;
     line-height: 27px;
@@ -244,7 +248,7 @@ padding-bottom: 70px;
     margin-left: 80px;
 }
 
-.subtitulo{
+.content .skills-container .card-body .skills-description-topics {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
@@ -253,29 +257,20 @@ padding-bottom: 70px;
     font-weight: bold;
 }
 
-.lista-card{
+.content .skills-container .card-body .habilities {
     color: white;
     font-size: 20px;
     margin: 7px;
     line-height: 27px;
  
 }
-.coluna-2{
-    background-color: rgb(64, 64, 64);
-width: 49%;
-float: right;
-border-radius: 5px;
--webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
--moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
-box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
-padding-bottom: 70px;
+
+.content .projects-container {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
 }
 
 
 
-.content-2{
-    height:100vh;
-    background-color: white;   
-}
 
 

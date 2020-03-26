@@ -27,36 +27,38 @@
 </head>
 
 <body>
+    
         <div class="navbar">
             <div class="topbar">
                 <a href="#" class="brand">
                     <img src="img/Logo_transparent.png" class="logo"/>
                 </a>
 
-                <nav role="navigation" class="nav-menu">
+                <nav role="navigation">
                         <a onclick="go('#home')" class="nav-link">Home</a>
                         <a onclick="go('#skills-description')" class="nav-link">Sobre</a>
-                        <a onclick="go('#skills-description')" class="nav-link">Projetos</a>
+                        <a onclick="go('#projects-container')" class="nav-link">Projetos</a>
                         <a onclick="go('#skills-description')" class="nav-link">Contato</a>
                 </nav>
             </div>
         </div>
 
-        <div class="conteudo">
-            <div class="content" id="home">
+        <div class="content">
+            <div class="introduction-container" id="home">
                
                 <p class="rs">RS</p>
             
-                <p class="titulo">Olá, eu sou Riul.</p>
-                <p class="descricao">Um Progamador Web Jr. apaixonado por desenvolvimento Web e Mobile que ama o que faz.</p>
-                <button class="presentation" onclick="go('#skills-description')">Vamos lá!</button>
+                <p class="title">Olá, eu sou Riul.</p>
+                <p class="brief-description">Um Progamador Web Jr. apaixonado por desenvolvimento Web e Mobile que ama o que faz.</p>
+                
+                <button onclick="go('#skills-description')">Vamos lá!</button>
             </div>
             
-                <div class="content-1" id="skills-description">
-                    <p class="titulo-descricao">É um prazer te conhecer!</p>
+                <div class="skills-container" id="skills-description">
+                    <p class="title-skills">É um prazer te conhecer!</p>
                 
-                    <div class="descricao-texto">
-                        <p class="paragrafo-descricao-inicial">
+                    <div class="skills-description-text">
+                        <p>
                             Estou buscando minha primeira experiência na área programação.
                             Sou Técnico em Informática e, atualmente, acadêmico de Sistemas de Informação. 
                             Tenho experiência em desenvolvimento web a partir de cursos, projetos que participei e do cargo de CTO de uma Startup.
@@ -65,78 +67,103 @@
                     </div>
                     
                         <div class="card-body">
-                            <div class="coluna-1">
-                                <img class="code" src="img/code.png" alt="code">
-                                <p class="titulo-card">Desenvolvimento Backend</p>
-                                <p class="paragrafo-descricao-card">
-                                    Aprecio soluções sólidas e bem construídas, com boa performance e excelente qualidade.
-                                </p>
-                                <p class="subtitulo">
-                                    Tecnologias:
-                                </p>
-                                <p class="paragrafo-descricao-card">
-                                    PHP, Java, NodeJS
-                                </p>
-                                <p class="subtitulo">
-                                    Skills:
-                                </p>
-                                <p class="lista-card">
-                                    Terminal
-                                </p>
-                                <p class="lista-card">
-                                    Github
-                                </p>
-                                <p class="lista-card">
-                                    Banco de dados relacionais
-                                </p>
-                                <p class="lista-card">
-                                    Arquitetura MVC
-                                </p>
+                            
+                            <div>
+                                <img src="img/code.png" alt="code">
+
+                                <h1 class="titulo-card">Desenvolvimento Backend</h1>
+                                    <p class="skills-description-paragraph">
+                                        Aprecio soluções sólidas e bem construídas, com boa performance e excelente qualidade.
+                                    </p>
+                                    <p class="skills-description-topics">
+                                        Tecnologias:
+                                    </p>
+                                    <p class="skills-description-paragraph">
+                                        PHP, Java, NodeJS
+                                    </p>
+                                    <p class="skills-description-topics">
+                                        Skills:
+                                    </p>
+                                    <p class="habilities">
+                                        Terminal
+                                    </p>
+                                    <p class="habilities">
+                                        Github
+                                    </p>
+                                    <p class="habilities">
+                                        Banco de dados relacionais
+                                    </p>
+                                    <p class="habilities">
+                                        Arquitetura MVC
+                                    </p>
                             </div>
                             
-                            <div class="coluna-2">
-                                <img class="code" src="img/code.png" alt="code">
-                                <p class="titulo-card">Desenvolvimento Frontend</p>
-                                <p class="paragrafo-descricao-card">
-                                    Gosto de começar do zero e amo transformar as ideias em algo real. 
-                                </p>
-                                <p class="subtitulo">
-                                    Tecnologias:
-                                </p>
-                                <p class="paragrafo-descricao-card">
-                                    HTML, CSS, JavaScript, ReactJS
-                                </p>
-                                <p class="subtitulo">
-                                    Skills:
-                                </p>
-                                <p class="lista-card">
-                                    Bootstrap
-                                </p>
-                                <p class="lista-card">
-                                   Materialize
-                                </p>
-                                <p class="lista-card">
-                                   Consumo de API
-                                </p>
-                                <p class="lista-card">
-                                   CRUD
-                                </p>
+                            <div>
+                                <img src="img/code.png" alt="code">
+
+                                <h1>Desenvolvimento Frontend</h1>
+                                    <p class="skills-description-paragraph">
+                                        Gosto de começar do zero e amo transformar as ideias em algo real. 
+                                    </p>
+                                    <p class="skills-description-topics">
+                                        Tecnologias:
+                                    </p>
+                                    <p class="skills-description-paragraph">
+                                        HTML, CSS, JavaScript, ReactJS
+                                    </p>
+                                    <p class="skills-description-topics">
+                                        Skills:
+                                    </p>
+                                    <p class="habilities">
+                                        Bootstrap
+                                    </p>
+                                    <p class="habilities">
+                                    Materialize
+                                    </p>
+                                    <p class="habilities">
+                                    Consumo de API
+                                    </p>
+                                    <p class="habilities">
+                                    CRUD
+                                    </p>
                             </div>
-                        <div>
+                        
+                        </div>  
                 </div>
-        </div>                      
+                
+                <div class="projects-container" id="projects-container">
+                    
+                </div>
+        </div>                   
+        
 <script>
-    function digitaTexto(elemento) {
-      const textoArray = elemento.innerHTML.split('');
-      elemento.innerHTML = '';
-      textoArray.forEach((letra, i) => {
-        setTimeout(() => elemento.innerHTML += letra, 70 * i);
+    function TypeText(element) {
+      const arrayText = element.innerHTML.split('');
+      element.innerHTML = '';
+      arrayText.map((word, i) => {
+        setTimeout(() => element.innerHTML += word, 70 * i);
       });
     }
   
-    const titulo = document.querySelector('.descricao');
-    digitaTexto(titulo);
-  </script>
-    </body>
+    const phrase = document.querySelector('.brief-description');
+    TypeText(phrase);
+</script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.querySelector(".topbar").style.height = "60px";
+        document.querySelector(".logo").style.maxHeight = "40px";
+        document.querySelector(".logo").style.padding = "10px";
+        document.querySelector(".brand").style.marginLeft = "20%";
+
+      } else {
+        document.querySelector(".topbar").style.height = "100px";
+        document.querySelector(".logo").style.maxHeight = "80px";
+      }
+    }</script>
+</body>
 
 </html>
