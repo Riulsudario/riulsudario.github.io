@@ -20,6 +20,10 @@
         <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <link href="/fontawesome-free-5.13.0-web/css/fontawesome.css" rel="stylesheet">
+        <link href="/fontawesome-free-5.13.0-web/css/brands.css" rel="stylesheet">
+        <link href="/fontawesome-free-5.13.0-web/css/solid.css" rel="stylesheet">
+
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <script src="js/script.js"></script>
         <title>Riul Sudário de Souza</title>
@@ -30,7 +34,7 @@
     
         <div class="navbar">
             <div class="topbar">
-                <a href="#" class="brand">
+                <a onclick="go('#home')" class="brand">
                     <img src="img/Logo_transparent.png" class="logo"/>
                 </a>
                 <nav role="navigation">
@@ -61,7 +65,8 @@
                             Estou buscando minha primeira experiência na área programação.
                             Sou Técnico em Informática e, atualmente, acadêmico de Sistemas de Informação. 
                             Tenho experiência em desenvolvimento web a partir de cursos, projetos que participei e do cargo de CTO de uma Startup.
-                            Eu adoro resolver problemas e utilizar as melhores tecnologias para isso. Sou curioso, confiante e corajoso quando se trata disso.
+                            Eu adoro resolver problemas e utilizar as melhores tecnologias para isso. Sou curioso, confiante e corajoso quando s
+                            e trata de resolução de problemas.
                         </p>
                     </div>
                     
@@ -134,45 +139,65 @@
                     <h1 class="title">Projetos</h1>
                     <div class="projects-grid">
                         <div class="projects">
-                            <p>EconmizAR</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            <p>EconomizAR</p>
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
                         </div>
                         <div class="projects">
                             <p>Morii Events</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
                         </div>
                         <div class="projects">
                             <p>QRTree App</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
                         </div>
                         <div class="projects">
                             <p>Be The Hero</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
                         </div>
                         <div class="projects">
                             <p>API de Rotas com React</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
                         </div>
 
                         <div class="projects">
                             <p>Snake Game</p>
-                            <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+
+                            <a href="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                                <img src="https://miro.medium.com/max/1600/1*dQzFEaAHwxouaImAuUd3EQ.gif">
+                            </a>
+                            
                         </div>
                     </div>
+                    <button>Visualizar todos projetos  <i class="fas fa-arrow-right">  </i> </button>
                 </div>
+
+
                 <div class="contact-container" id="contact-container">
-                    <section>
-                        <img src='img/Logo_transparent.png' alt="RS" />
-              
-                      </section>
-                      <form action="">
-                        <input placeholder="E-mail"/>
-                        <input placeholder="Nome"/>
-                        <textarea placeholder="Mensagem"></textarea>
+
+                      <form action="http://riul.tech/mail_send/mail_send.php" method="POST">
                         
-              
+                        <h1 class="title">Mande-me uma mensagem!</h1>
+
+                        <input required name="mail" placeholder="E-mail"/>
+
+                        <input required name="name" placeholder="Nome"/>
+
+                        <input required name="subject" placeholder="Assunto"/>
+
+                        <textarea required name="message" placeholder="Mensagem"></textarea>
+                        
                         <button class="button" type="submit">
-                          Enviar
+                            Enviar Mensagem  <i class="fab fa-telegram-plane"></i>
                         </button>
                       </form>
                     </div>
