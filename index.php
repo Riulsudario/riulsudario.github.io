@@ -165,7 +165,7 @@
                         <img src='img/Logo_transparent.png' alt="RS" />
               
                       </section>
-                      <form>
+                      <form action="">
                         <input placeholder="E-mail"/>
                         <input placeholder="Nome"/>
                         <textarea placeholder="Mensagem"></textarea>

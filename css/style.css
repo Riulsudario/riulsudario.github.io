@@ -121,7 +121,7 @@ a{
     position: relative;
     font-size: 100px;
     margin: 0;
-    padding-top: 10px;
+    padding-top: 70px;
 }
 
 .content .introduction-container .title {
@@ -352,7 +352,7 @@ a{
 
 .contact-container form{
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .contact-container form input, 
@@ -364,7 +364,8 @@ input, button, textarea{
 }
 
 form input{
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     height: 60px;
     color: #333;
     border: 1px solid #dcdce6;
@@ -373,7 +374,8 @@ form input{
 }
 
 form textarea{
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
     min-height: 140px;
     color: #333;
     border: 1px solid #dcdce6;
@@ -385,6 +387,7 @@ form textarea{
 
 .button{
     width: 100%;
+    padding: 0 24px;
     height: 60px;
     background: rgb(90,90,90);
     border: 0;
