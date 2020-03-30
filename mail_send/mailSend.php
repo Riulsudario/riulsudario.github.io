@@ -15,9 +15,9 @@
       $rtr = $mail->send();
       
       if($rtr){
-         echo 'Success!\n';
+         header('location: success.php');
       }else{
-         echo 'Error\n';
+         header('location: error.php');
       }
    
    }
