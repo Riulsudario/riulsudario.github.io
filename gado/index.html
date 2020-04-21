@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro do gado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content">
+
+        <div class="canvas">
+            <video id="video" width="600" height="450" preload autoplay loop muted></video>
+            <canvas id="canvas" width="600" height="450"></canvas>
+        </div>
+
+       
+    </div>
+   
+  
+    <script src="tracking-min.js"></script>
+    <script src="data/face-min.js"></script>
+
+    <script>
+        function init(){
+            const video = document.querySelector('#video');
+            const canvas = document.querySelector('#canvas');
+            const context = canvas.getContext('2d');
+            const tracker = new tracking.ObjectTracker('face');
+            tracking.track('#video', tracker, {camera: true});
+            tracker.on('track', event => {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                event.data.forEach( rect => {
+
+                    console.log(rect);
+                    var horns = new Image();
+                    horns.src = 'chifre.png';
+                    width = rect.width + (rect.width / 1.28);
+                    height = rect.height;
+
+                    xHorn = rect.x - (rect.width / 1.28)/2;
+                    yHorn = rect.y - (rect.y / 3);
+                    context.drawImage(horns, xHorn, yHorn, width, height);
+
+                });
+            });
+
+           
+        }
+        window.onload = init();
+    </script>
+</body>
+</html>

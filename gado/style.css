@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000000;
+}
+video, canvas{
+    position: absolute;  
+}
+
+.canvas{
+    width: 600px;
+    height: 450px;
+    border: #fff solid 6px;
+    display: block;
+    margin: 0 auto;
+   
+}
