@@ -18,17 +18,89 @@
     }
 
     .content .introduction-container .rs{
-        font-size: 200px;
+        font-size: 150px;
     }
 
     .content .introduction-container .title{
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .content .introduction-container .brief-description{
         font-size: 40px;
     }
-}
+    .content .skills-container .skills-description-text{
+        width: 90%;
+    }
+    .content .skills-container p{
+        font-size: 60px !important;
+    }
+    .content .skills-container .skills-description-text p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px !important;
+        font-weight: normal;
+        line-height: normal;
+        text-align: justify;
+    }
+    .content .skills-container .skills{
+        width: 90%;
+    }
+    .content .skills-container .skills h1{
+        font-size: 60px;
+    }
+    .content .skills-container .timeline-wrapper .node h3{
+        font-size: 40px !important;
+        font-weight: bold;
+    }
+    .content .skills-container .timeline-wrapper .node h6{
+        font-size: 35px !important;
+    }
+    .content .skills-container .timeline-wrapper .node p{
+        font-size: 40px !important;
+    }
+    .content .skills-container  .habilities h1{
+        font-size: 60px;
+    }
+    .content .skills-container  .habilities .skills-bar{
+        width: 90%;
+        flex-direction: column;
+    }
+    .content .skills-container  .habilities .skills-bar .first, .second{
+        width: 100%;
+        margin: 0 !important;
+        padding: 0;
+        padding-inline-start: 0 !important;
+    }
+    .content .skills-container  .habilities .skills-bar ul{
+        padding-inline-start: 0 !important;
+    }
+    .content .skills-container  .habilities .skills-bar li{
+        font-size: 35px;
+    }
+    .content .skills-container i{
+        display: none;
+    }
+    .content .projects-container{
+        height: fit-content;
+    }
+    .content .projects-container .title{
+        font-size: 60px;
+    }
+    .content .projects-container .projects-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .content .projects-container .projects-grid .projects{
+        max-width: none;
+    }
+    .content .projects-container .projects-grid .projects p{
+        font-size: 50px;
+    }
+    .content .projects-container button{
+        width: 50%;
+        height: 80px;
+        font-size: 30px;
+    }
+}  
   
   /* 
     ##Device = Tablets, Ipads (landscape)
