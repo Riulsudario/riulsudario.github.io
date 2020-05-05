@@ -1,4 +1,4 @@
-# Portifolio
+# Portfólio
 
 Construído com HTML, CSS, JS e uma pontinha de PHP - Nenhum framework.
 Responsivo para dispositivos mobile. Utilizado CSS `media-queries` para isto.
